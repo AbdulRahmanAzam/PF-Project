@@ -219,13 +219,14 @@ int main(){
 	int cont;
 	int level;
 	int mode;
-	char board[SIZE][SIZE] = {
-		{'1','2','3'},
-		{'4','5','6'},
-		{'7','8','9'}
-	};
+	
 	printf("WELCOME TO TIC TAC BOARD BATTLE\n\n");
 	do{
+		char board[SIZE][SIZE] = {
+			{'1','2','3'},
+			{'4','5','6'},
+			{'7','8','9'}
+		};
 		printf("Choose the mode of the game \nDo you want to play multiplayer or single\nEnter 1 for multiplayer or 0 for single\n");
 		scanf("%d",&mode);
 
