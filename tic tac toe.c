@@ -3,6 +3,16 @@
 
 #define SIZE 3
 
+void printBoard(char board[SIZE][SIZE])
+int isBoardFull(char board[SIZE][SIZE])
+int winner(char board[SIZE][SIZE], char ch)
+int isValid(char board[SIZE][SIZE], int row, int col)
+int evaluate(char board[SIZE][SIZE])
+int minimax(char board[SIZE][SIZE], int depth, bool isMax)
+void computer(char board[SIZE][SIZE])
+void single(char board[SIZE][SIZE])
+void multiplayer(char board[SIZE][SIZE])
+
 //to print the board of tic tac toe
 void printBoard(char board[SIZE][SIZE]){
 	for(int i=0; i < SIZE; i++){
@@ -134,8 +144,6 @@ void computer(char board[SIZE][SIZE]){
 void single(char board[SIZE][SIZE]){
 	printBoard(board);
 	while(1){
-		// printf("current board\n");
-		// printBoard(board);
 		int move;
 		int row,col;
 		printf("Enter your move ");
@@ -162,7 +170,6 @@ void single(char board[SIZE][SIZE]){
 		}
 
 		computer(board);
-
 		printBoard(board);
 
 		if(winner(board, 'X')){
