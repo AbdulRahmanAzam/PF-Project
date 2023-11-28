@@ -151,36 +151,41 @@ void single(char board[SIZE][SIZE]){
 		
 		row = (move - 1) / 3;
 		col = (move - 1) % 3;
-
-		if(row < 0 || col < 0 || row >=SIZE || col >= SIZE){
-			printf("Invalid move. Try again. \n");
-			continue;
-		}
-
-		board[row][col] = 'O';
-
-		if(winner(board, 'O')){
-			printf("Congratulation you won\n ");
-			break;
-		}
-
-		if(isBoardFull(board)){
-			printf("Game is draw\n");
-			break;
-		}
-
-		computer(board);
-		printBoard(board);
-
-		if(winner(board, 'X')){
-			printf("Computer wins\n ");
-			break;
-		}
-
-		if(isBoardFull(board)){
-			printf("Game is draw\n");
-			break;
-		}		
+        
+        if(isValid(board,row,col)){
+    		if(row < 0 || col < 0 || row >=SIZE || col >= SIZE){
+    			printf("Invalid move. Try again. \n");
+    			continue;
+    		}
+    
+    		board[row][col] = 'O';
+    
+    		if(winner(board, 'O')){
+    			printf("Congratulation you won\n ");
+    			break;
+    		}
+    
+    		if(isBoardFull(board)){
+    			printf("Game is draw\n");
+    			break;
+    		}
+    
+    		computer(board);
+    
+    		printBoard(board);
+    
+    		if(winner(board, 'X')){
+    			printf("Computer wins\n ");
+    			break;
+    		}
+    
+    		if(isBoardFull(board)){
+    			printf("Game is draw\n");
+    			break;
+    		}	
+        }else{
+	        printf("Invalid input.\n");
+	    }
 	}
 	return;
 }
@@ -218,7 +223,6 @@ void multiplayer(char board[SIZE][SIZE]){
 		}
 
 		player = (player == 'X') ? 'O' : 'X';
-
 	}
 }
 
@@ -234,7 +238,7 @@ int main(){
 			{'4','5','6'},
 			{'7','8','9'}
 		};
-		printf("Choose the mode of the game \nDo you want to play multiplayer or single\nEnter 1 for multiplayer or 0 for single\n");
+		printf("Choose the mode of the game \n\nDo you want to play multiplayer or single\nEnter 1 for multiplayer or 0 for single\n");
 		scanf("%d",&mode);
 
 		if(mode){
@@ -249,4 +253,5 @@ int main(){
 	printf("See you again!");
 	
 }
+
 
