@@ -10,15 +10,15 @@ void printBoard(char board[SIZE][SIZE]){
 			else printf(" %c ", board[i][j]);
 		}
 		printf("\n");
-		if(i < SIZE -1) for (int k=0; k < SIZE; k++) printf(" --"); // ------------------------------------------------------------
-		printf("\n"); // -----------------------------------------------------------------------------------------------------------
+		if(i < SIZE -1) for (int k=0; k < SIZE; k++) printf(" --"); 
+		printf("\n"); 
 	}
 }
 
 int isBoardFull(char board[SIZE][SIZE]){
 	for(int i=0;i < SIZE; i++){
 		for(int j=0;j <SIZE; j++){
-			if(board[i][j] >= '1' && board[i][j] <= '9'){ // -----------------------------------------------------------------------------------------------------------
+			if(board[i][j] >= '1' && board[i][j] <= '9'){ 
 				return 0; // board is not full
 			}
 		}
@@ -72,12 +72,12 @@ int minimax(char board[SIZE][SIZE], int depth, bool isMax){
 		int max = -1000;
 		for(int i=0;i < SIZE; i++){
 			for(int j=0; j < SIZE; j++){
-				if(isValid(board, i, j)){ //// -----------------------------------------------------------------------------------------------------------
-					ch = board[i][j]; // -----------------------------------------------------------------------------------------------------------
+				if(isValid(board, i, j)){ 
+					ch = board[i][j]; 
 					board[i][j] = 'X';
 					int current = minimax(board,depth + 1, !isMax);
 					max = (current > max) ? current : max;
-					board[i][j] = ch; // -----------------------------------------------------------------------------------------------------------
+					board[i][j] = ch; 
 				}
 			}
 		}
@@ -86,12 +86,12 @@ int minimax(char board[SIZE][SIZE], int depth, bool isMax){
 		int min = 1000;
 		for(int i=0;i < SIZE; i++){
 			for(int j=0;j < SIZE; j++){
-				if(isValid(board, i, j)){// -----------------------------------------------------------------------------------------------------------
-					ch = board[i][j];// -----------------------------------------------------------------------------------------------------------
+				if(isValid(board, i, j)){
+					ch = board[i][j];
 					board[i][j] = 'O';
 					int current = minimax(board, depth + 1, !isMax);
 					min = (current < min) ? current : min;
-					board[i][j] = ch; // -----------------------------------------------------------------------------------------------------------
+					board[i][j] = ch; 
 				}
 			}
 		}
@@ -107,11 +107,11 @@ void computer(char board[SIZE][SIZE]){
 	for(int i=0;i < SIZE; i++){
 		for(int j=0;j < SIZE; j++){
 
-			if(isValid(board, i, j)){ // -----------------------------------------------------------------------------------------------------------
-				ch = board[i][j]; // -----------------------------------------------------------------------------------------------------------
+			if(isValid(board, i, j)){ 
+				ch = board[i][j]; 
 				board[i][j] = 'X';
 				int move = minimax(board, 0, 0);
-				board[i][j] = ch;// -----------------------------------------------------------------------------------------------------------
+				board[i][j] = ch;
 
 				if(move > best){
 					row = i;
