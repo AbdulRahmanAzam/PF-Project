@@ -1,3 +1,27 @@
+// to check whether player wins or not
+int winner(char board[SIZE][SIZE], char ch){
+	for(int i=0;i < SIZE; i++){
+		if ((board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] == ch ) ||
+            (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] == ch)) {
+            return 1;  // Player wins
+        }
+	}
+
+	if ((board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] == ch) ||
+        (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] == ch)) {
+        return 1;  // Player wins
+    }
+
+    return 0;
+}
+
+// to check whether the move is valid or it is already input before
+int isValid(char board[SIZE][SIZE], int row, int col){
+	if(board[row][col] >= '1' && board[row][col] <= '9'){
+		return 1; // yes position valid
+	}
+	return 0; // position not valid 
+}
 
 
 
