@@ -44,6 +44,11 @@ The game begins with prompting the user to choose their desired game and difficu
 Our TIC TAC TOE game has a significant feature which is:The user can play in two modes either multiplayer or single player vs computer, the second mode will never let the user to win. However, there is a chance of user to win in the first mode.
 # work done uptil yet:
 3 of all our games are ready.
+# Contributions:
+Abdul Rehman: Minimax algo, evaluation for tic tac toe
+Sara functions in tic tac toe, guessing the number game
+Adina : Rock paper scissors, functions
+
  # The modes we have used in these games are
  Functions(recursive, user defined).
  Minimax algorithm.
