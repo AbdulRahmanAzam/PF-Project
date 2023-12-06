@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <time.h>
+#include <stdlib.h>
 #define SIZE 3
 
 void printBoard(char board[SIZE][SIZE]);
@@ -9,21 +10,29 @@ int winner(char board[SIZE][SIZE], char ch);
 int isValid(char board[SIZE][SIZE], int row, int col);
 int evaluate(char board[SIZE][SIZE]);
 int minimax(char board[SIZE][SIZE], int depth, bool isMax);
-void computer(char board[SIZE][SIZE]);
-void single(char board[SIZE][SIZE]);
+void best_move(char board[SIZE][SIZE]);
+void easy_move(char board[SIZE][SIZE]);
+void computer(char board[SIZE][SIZE],int mode);
 void multiplayer(char board[SIZE][SIZE]);
 
 //to print the board of tic tac toe
 void printBoard(char board[SIZE][SIZE]){
+      printf("\033[33m***************\033[0m\n"); 
 	for(int i=0; i < SIZE; i++){
+	    
 		for(int j =0 ; j < SIZE; j++){
-			if(j < SIZE-1) printf(" %c |", board[i][j]);
-			else printf(" %c ", board[i][j]);
+		    if(board[i][j] == 'X'){
+			     printf("\033[33m|\033[0m \033[31m%c\033[0m \033[33m|\033[0m", board[i][j]);
+		    }else if(board[i][j] == 'O'){
+		        printf("\033[33m|\033[0m \033[34m%c\033[0m \033[33m|\033[0m", board[i][j]);
+		    }else
+		         printf("\033[33m|\033[0m %c \033[33m|\033[0m", board[i][j]);
 		}
 		printf("\n");
-		if(i < SIZE -1) for (int k=0; k < SIZE; k++) printf(" --"); 
-		printf("\n"); 
+		 if(i < SIZE -1) printf("\033[33m---------------\033[0m\n"); 
+		
 	}
+	printf("\033[33m***************\033[0m\n"); 
 }
 
 //check whether the board have available inputs or not
@@ -114,8 +123,8 @@ int minimax(char board[SIZE][SIZE], int depth, bool isMax){
 	}
 }
 
-// the turn of the computer which calls minimax algo to find its input
-void computer(char board[SIZE][SIZE]){
+// the turn of the best_move which calls minimax algo to find its input
+void best_move(char board[SIZE][SIZE]){
 	int best = -1000;
 	int row = -1, col = -1;
 	char ch;
@@ -140,8 +149,22 @@ void computer(char board[SIZE][SIZE]){
 	board[row][col] = 'X';
 }
 
+void easy_move(char board[SIZE][SIZE]){
+    int move;
+    int row;
+    int col;
+    do{
+        move = (rand() % 9) + 1;
+        row = (move - 1) / 3;
+        col = (move - 1) % 3;
+    }while(isValid(board,row,col) == 0);
+    
+    board[row][col] = 'X';
+    printf("Computer move %d\n",move);
+}
+
 //when the player is playing with computer
-void single(char board[SIZE][SIZE]){
+void computer(char board[SIZE][SIZE], int mode){
 	printBoard(board);
 	while(1){
 		int move;
@@ -169,8 +192,8 @@ void single(char board[SIZE][SIZE]){
     			printf("Game is draw\n");
     			break;
     		}
-    
-    		computer(board);
+            if(mode == 2) easy_move(board);
+    		if(mode == 3) best_move(board);
     
     		printBoard(board);
     
@@ -189,6 +212,7 @@ void single(char board[SIZE][SIZE]){
 	}
 	return;
 }
+
 
 void multiplayer(char board[SIZE][SIZE]){
 	char player = 'X';
@@ -230,28 +254,37 @@ int main(){
 	int cont;
 	int level;
 	int mode;
-	
-	printf("WELCOME TO TIC TAC BOARD BATTLE\n\n");
+	char name[20];
+	srand(time(0));
+	printf("\033[36m^^^^^^^^^^ WELCOME TO TIC TAC BOARD BATTLE ^^^^^^^^^^^\033[0m\n\n");
 	do{
 		char board[SIZE][SIZE] = {
 			{'1','2','3'},
 			{'4','5','6'},
 			{'7','8','9'}
 		};
-		printf("Choose the mode of the game \n\nDo you want to play multiplayer or single\nEnter 1 for multiplayer or 0 for single\n");
+// 		printf("Choose the mode of the game \n\nDo you want to play multiplayer or single\nEnter 1 for multiplayer or 0 for single\n");
+		printf("1.Want to play with friend\n"
+		"2.Want to play with computer in easy mode\n"
+		"3.Want to play with computer in hard mode\n"
+		"4.EXIT\n");
+		
 		scanf("%d",&mode);
 
-		if(mode){
+		if(mode == 1){
 			multiplayer(board);
-		}else{
-			single(board);		
-		}
+		}else if(mode == 2){
+			computer(board,mode);//easy mode		
+		}else if(mode == 3){
+		    computer(board,mode);//hard mode
+		}else break;
 
-		printf("Do you want to play again\n Enter 1 to continue or Enter 0 to exit\n");
+		printf("Do you want to play again\n"
+		"1. To continue\n" 
+		"0. To exit\n");
+		
 		scanf("%d", &cont);
 	}while(cont);
 	printf("See you again!");
 	
 }
-
-
