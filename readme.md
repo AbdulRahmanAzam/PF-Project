@@ -3,19 +3,22 @@
 # Project Proposal
 
 Group members:
+■ Abdul Rehman Azam [23K-0061]
 
 ■ Adina Faraz [23K-0008]
 
 ■ Syeda Sara Ali [23K-0070]
 
-• Abdul Rehman Azam [23K-0061]
+
 
 Course title: Programming fundamentals [CS1002]
 
 Course instructor: Farooq Zaidi.
 
 Date of submission: 06-10-2023
-Project Description
+
+Project Description:
+
 The project aims to create a classic game in C programming language which has further three games, tic tac toe, guessing the number and rock paper scissors, where the user can play against a computer opponent and multiple players can also play. This project is focused on providing an engaging and interactive gaming experience without specific Al techniques, making it suitable for beginners in programming.
 Project Objectives
 1. Develop three games within a single functional game with a user-friendly interface.
