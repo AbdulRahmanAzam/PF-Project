@@ -25,11 +25,11 @@ int generateComputerChoice() {
 
 // Function to determine the winner based on choices
 int determineWinner(int userChoice, int computerChoice) {
-    if ((userChoice == 0 && (computerChoice == 2 || computerChoice == 3)) ||
-        (userChoice == 1 && (computerChoice == 0 || computerChoice == 4)) ||
-        (userChoice == 2 && (computerChoice == 1 || computerChoice == 3)) ||
-        (userChoice == 3 && (computerChoice == 1 || computerChoice == 4)) ||
-        (userChoice == 4 && (computerChoice == 0 || computerChoice == 2))) {
+    if ((userChoice == 1 && (computerChoice == 3 || computerChoice == 4)) ||
+        (userChoice == 2 && (computerChoice == 1 || computerChoice == 5)) ||
+        (userChoice == 3 && (computerChoice == 2 || computerChoice == 4)) ||
+        (userChoice == 4 && (computerChoice == 2 || computerChoice == 5)) ||
+        (userChoice == 5 && (computerChoice == 1 || computerChoice == 3))) {
         return 1;  // User wins
     } else if (userChoice == computerChoice) {
         return 0;  // It's a tie
@@ -40,12 +40,12 @@ int determineWinner(int userChoice, int computerChoice) {
 
 // Function to print choices
 void printChoices() {
-    printf("Choices:\n");
-    printf("0. Rock\n");
-    printf("1. Paper\n");
-    printf("2. Scissors\n");
-    printf("3. Lizard\n");
-    printf("4. Spock\n");
+    printf("Choices:\n"
+    "1. Rock\n"
+    "2. Paper\n"
+    "3. Scissors\n"
+    "4. Lizard\n"
+    "5. Spock\n");
 }
 
 void printBoard(char board[SIZE][SIZE]);
@@ -237,7 +237,7 @@ void computer(char board[SIZE][SIZE], int mode){
           printf("Game is draw\n");
           break;
         }
-          system("clear");
+        //   system("cls");
           printf("\033[36m^^^^^^^^^^ WELCOME TO TIC TAC BOARD BATTLE ^^^^^^^^^^^\033[0m\n\n");
           if(mode == 2) easy_move(board);
           if(mode == 3) best_move(board);
@@ -266,7 +266,8 @@ void multiplayer(char board[SIZE][SIZE]){
   int move;
   int row,col;
   while(1){
-    system("clear");
+    // system("cls");
+
     printBoard(board);
     printf("player %c enter move ",player);
     scanf("%d", &move);
@@ -304,9 +305,9 @@ int main()
 	int num;
 	printf("----------WELCOME TO THE LOGICLAB TECH----------");
 	printf("\nChoose your interest: ");
-	printf("\n1. Tic Tac Toe (Multiplayer/Solo)");
-	printf("\n2. Guessing the number");
-	printf("\n3. Rock, paper, scissors, lizard, spock");
+	printf("\n1. Tic Tac Toe (Multiplayer/Solo) ");
+	printf("\n2. Guessing the number ");
+	printf("\n3. Rock, paper, scissors, lizard, spock\n");
 	scanf("%d",&num);
 
 	if(num==1)
@@ -345,11 +346,8 @@ int main()
     scanf("%d", &cont);
   }while(cont);
   printf("See you again!");
-
+    return 0;
 }
-	
-
-
 	
 	if(num==2)
 	{
@@ -390,10 +388,10 @@ int main()
     do {
         // Get user choice
         printChoices();
-        printf("Enter your choice (0-4): ");
+        printf("Enter your choice (1-5): ");
         scanf("%d", &userChoice);
 
-        if (userChoice < 0 || userChoice > 4) {
+        if (userChoice < 1 || userChoice > 5) {
             printf("Invalid choice. Please enter a number between 0 and 4.\n");
             continue;
         }
