@@ -260,7 +260,6 @@ void computer(char board[SIZE][SIZE], int mode){
   return;
 }
 
-
 void multiplayer(char board[SIZE][SIZE]){
   char player = 'X';
   int move;
