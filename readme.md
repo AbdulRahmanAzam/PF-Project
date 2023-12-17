@@ -23,7 +23,7 @@ The project aims to create a classic game named as "CRYPTOGRAM BRAINDOM" using C
 First and Foremost, in Tic Tac Toe the user can play against a computer or against a person which is based upon user's choice. After that the user can choose the difficulty level to determine how easy or hard they want the game to be. While playing against a computer if he picks an easy level, there will be a posiblity that he might win, However, if he chooses hard then either he will lose or the game will be drawn.
 Moreover, if the game is being played against the computer, the user will make their choice, and the computer will. The computer's move completely depends upon some functions and the mini-max algorithm. In this case, either the computer will win the game, or it will end in a draw.However, when the game is being played between two people, both of them will make their choices sequentially, and one of them will win the game. 
 
-## ROCK PAPER SCISSOR LIZARD SPORK:
+## ROCK PAPER SCISSOR LIZARD SPOCK:
 Basically, in this game the user can choose amoung these 5 options (mainly Rock, Paper, Scissors, Lizard, Spork).Afterward, the user will make his choice, and then accordingly the computer will choose using a random function. Then the winner will be chosen using some functions. Either user will win or lose.
 
 ## GUESSIG THE NUMBER:
@@ -69,7 +69,7 @@ enhancing UI
 Minimax algo and Evaluation for tic tac toe
 
 #### S. Sara Ali: 
-Functions in tic tac toe and Euessing the number game
+Functions in tic tac toe and Guessing the number game
 
 #### Adina Faraz:
 Rock paper scissors and Functions for tic tac toe
