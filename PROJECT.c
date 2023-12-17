@@ -304,7 +304,7 @@ int main()
 	int num;
 	printf("----------WELCOME TO THE CRYPTOGRAM BRAINDOM----------");
 	printf("\nChoose your interest: ");
-	printf("\n1. Tic Tac Toe (Multiplayer/Solo) ");
+	printf("\n1. Tic Tac Toe ");
 	printf("\n2. Guessing the number ");
 	printf("\n3. Rock, paper, scissors, lizard, spock\n");
 	scanf("%d",&num);
