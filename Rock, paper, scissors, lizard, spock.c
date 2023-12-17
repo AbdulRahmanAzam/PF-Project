@@ -1,4 +1,4 @@
-##Rock, paper, scissors, lizard, spock
+## Rock, paper, scissors, lizard, spock
 ##Rules for the game are as under:
 /*
 ##Rock (0):
