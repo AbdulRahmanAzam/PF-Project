@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 #define SIZE 3
-// Function to generate a random number between 1 and 100
+//Function to generate random number between 1 and 100
 int RandomNumber() {
     return rand() % 100 + 1;
 }
