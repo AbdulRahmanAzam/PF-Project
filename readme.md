@@ -3,6 +3,8 @@
 # Project Proposal
 
 Group members:
+
+
 ■ Abdul Rehman Azam [23K-0061]
 
 ■ Adina Faraz [23K-0008]
@@ -50,7 +52,7 @@ Our TIC TAC TOE game has a significant feature which is:The user can play in two
 # Contributions:
 Abdul Rehman: Minimax algo, evaluation for tic tac toe
 Sara functions in tic tac toe, guessing the number game
-Adina : Rock paper scissors, functions
+Adina : Rock paper scissors, functions for tic tac toe
 
  # The modes we have used in these games are
  Functions(recursive, user defined).
