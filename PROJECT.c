@@ -302,7 +302,7 @@ void multiplayer(char board[SIZE][SIZE]){
 int main()
 {
 	int num;
-	printf("----------WELCOME TO THE LOGICLAB TECH----------");
+	printf("----------WELCOME TO THE CRYPTOGRAM BRAINDOM----------");
 	printf("\nChoose your interest: ");
 	printf("\n1. Tic Tac Toe (Multiplayer/Solo) ");
 	printf("\n2. Guessing the number ");
