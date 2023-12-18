@@ -393,7 +393,7 @@ void guessing_the_number(){
     } while (!isCorrect(numberToGuess, userGuess));
 
     printf(GREEN"Congratulations! You guessed the number in %d attempts.\n"RESET, attempts);
-    Sleep(500);
+    Sleep(1000);
     system("cls");
     return ;
 }
@@ -489,7 +489,7 @@ int main()
     scanf("%s",any);
     system("cls");
 	do{
-        printf(BLUE"^^^^^^^^^"YELLOW"WELCOME" RESET"TO "RESET RED" T "GREEN"R "BLUE"I "YELLOW"P "GREEN"L "RED"E "RESET YELLOW"CHAL"GREEN"LENGE" RED"SHOWDOWN" BLUE"^^^^^^^^^\n"RESET);
+        printf(BLUE"^^^^^^^^^"YELLOW" WELCOME" RESET" TO "RESET RED" T "GREEN"R "BLUE"I "YELLOW"P "GREEN"L "RED"E "RESET YELLOW" CHAL"GREEN"LENGE" RED" SHOWDOWN" BLUE"^^^^^^^^^\n"RESET);
         
         printf("\nChoose your interest: "
         "\n\t1. Tic Tac Toe (Multiplayer/Solo) "
