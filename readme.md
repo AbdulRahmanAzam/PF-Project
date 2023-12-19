@@ -2,7 +2,6 @@
 
 # Project Proposal
 
-
 ## Group members:
 
 ■ Abdul Rehman Azam [23K-0061]
@@ -51,18 +50,13 @@ File can be used for input and output to save and load game states, allowing pla
 #### Functions:
 Functions will be made to improve readability and to avoid repetition of same code. They will also make the code precise and handle specific tasks.
 
-## Progress:
-
-### Current Progress:
-The 3 games that are the part of our project are almost completed. Just some functionalities are to be added including filing, adding UI to make our work look more attractive, merging the games and some other basic stuff are to be done.
-
-### Main Modes Used:
+## Main Modes Used:
 Functions(recursive, user defined).
-Minimax algorithm.
-conditional structures.
+Artificial Intelligence algorithm.
+Conditional structures.
 Filing.
-enhancing UI
-   
+Enhancing UI.
+### 
 ## Contributions:
 
 #### Abdul Rehman Azam: 
