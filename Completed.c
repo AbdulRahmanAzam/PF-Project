@@ -219,16 +219,19 @@ void load(char board[SIZE][SIZE]){
     printBoard(board);
     return;
 }
-void reset(char board[SIZE][SIZE]){
-    for(int i=0,k=1; i< SIZE; i++){
-        for(int j=0; j < SIZE; j++,k++){
-            board[i][j] = k;
+void reset(char board[SIZE][SIZE]) {
+    save(board);  // Save the current state before resetting
+
+    for (int i = 0, k = 1; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++, k++) {
+            board[i][j] = k + '0'; // Convert the integer to character
         }
     }
     printf(GREEN"Game reset successfully!\n"RESET);
     printBoard(board);
-    return; 
+    return;
 }
+
 
 //when the player is playing with computer
 void computer(char board[SIZE][SIZE], int mode) {
