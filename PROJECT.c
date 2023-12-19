@@ -347,7 +347,10 @@ void computer(char board[SIZE][SIZE], int mode) {
 
             board[row][col] = 'O';
 
-            if (winner(board, 'O')) {
+            if (winner(board, 'O')) {     
+                system("cls");
+                tictac_name();
+                printBoard(board);
                 printf(GREEN"Congratulations you won!\n "RESET);
                 break;
             }
@@ -493,7 +496,7 @@ void guessing_the_number(){
 
 
 int generateComputerChoice() {
-    return rand() % 5;  // 0: Rock, 1: Paper, 2: Scissors, 3: Lizard, 4: Spock
+    return rand() % 5 + 1;  // 1: Rock, 2: Paper, 3: Scissors, 4: Lizard, 5: Spock
 }
 
 // Function to determine the winner based on choices on rock paper
