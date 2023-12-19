@@ -78,16 +78,38 @@ Moreover, we also faced problem while dealing with the ivalid inputs. On pressin
 ## Contributions:
 
 #### Abdul Rehman Azam: 
-	Implementation of AI algorithm in TIC TAC TOE that includes functions: 1. computer. 2. bestmove. 3.  Minimax.  4. Evaluate. 5.  Isvalid. 6. Winner.
+	Implementation of AI algorithm in TIC TAC TOE that includes functions: 
+1. computer.
+2.  bestmove.
+3. Minimax.
+4. Evaluate.
+5. Isvalid.
+6. Winner.
 
 	Making UI to look more attractive and user friendly.
 
 #### S. Sara Ali: 
-	Made Guessing The Number Game using functions: 1. guessing_the_number. 2. RandomNumber. 3. isCorrect. 
+	Made Guessing The Number Game using functions: 
+1. guessing_the_number.
+2.  RandomNumber.
+3.  isCorrect. 
 
-	Functions in TIC TAC TOE: 1. Multiplayer. 2. isBoardFull. 3. printBoard. 4. save. 5. tictac_name.
+	Functions in TIC TAC TOE: 
+1. Multiplayer.
+2. isBoardFull. 
+3. printBoard. 
+4. save.
+5. tictac_name.
 
 #### Adina Faraz:
-	Made Rock Paper Scissor that includes functions: 1. generateComputerChoice. 2. determineWinner. 3. printChoices 4. rock_paper.   
+	Made Rock Paper Scissor that includes functions: 
+1. generateComputerChoice.
+2.  determineWinner.
+3. printChoices
+4. rock_paper.   
 
-	Functions in TIC TAC TOE: 1. file_func. 2. easy_move. 3. reset. 4. Load.
+	Functions in TIC TAC TOE: 
+1. file_func.
+2.  2. easy_move.
+3.  reset.
+4.  Load.
