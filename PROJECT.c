@@ -20,6 +20,7 @@ void printChoices();
 void rock_paper();
 
 //Guess the number game
+void guessing_the_number();
 int RandomNumber();
 int isCorrect(int numberToGuess, int userGuess);
 
@@ -36,6 +37,7 @@ void reload(char board[SIZE][SIZE]);
 void easy_move(char board[SIZE][SIZE]);
 void computer(char board[SIZE][SIZE],int mode);
 void multiplayer(char board[SIZE][SIZE]);
+void file_func();
 void tictac_name();
 
 
@@ -90,7 +92,7 @@ int main()
                 "1. To continue\n" 
                 "0. To go back\n");
                 scanf("%d", &cont);
-                
+
                 system("cls");
             }while(cont);
             
@@ -452,7 +454,7 @@ int isCorrect(int numberToGuess, int userGuess) {
     return 0;  // Guess is incorrect
 }
 
-void guessing_the_number() {
+void guessing_the_number(){
     char exitChar;
     int numberToGuess, userGuess, attempts = 0;
 
