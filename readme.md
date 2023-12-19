@@ -16,7 +16,7 @@
 
 # Project Illustration:
 
-The project aims to create a classic game named as "TRIPLET CHALLENGE" using C programming language which includes three games, Tic Tac Toe, Guessing The Number and Rock Paper Scissors Lizard Spork. Firstly, and most importantly, the user will be asked to choose any 1 of the tree mentioned games.
+The project aims to create a classic game named as "TRIPLE CHALLENGE SHOWDOWN" using C programming language which includes three games, Tic Tac Toe, Guessing The Number and Rock Paper Scissors Lizard Spork. Firstly, and most importantly, the user will be asked to choose any 1 of the tree mentioned games.
 
 ## TIC TAC TOE:
 First and foremost, in Tic Tac Toe the user can play against a computer or against a person which is based upon the user's choice. After that, the user can choose the difficulty level to determine how easy or hard they want the game to be. While playing against a computer if he picks an easy level, there will be a possibility that he might win, However, if he chooses hard then either he will lose, or the game will be drawn.
