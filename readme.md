@@ -29,7 +29,7 @@ Basically, in this game, the user can choose among these 5 options (mainly Rock,
 Firstly, the computer will generate a number between 1-100 randomly using a function. Thereafter, the user will be asked to input his guesses this process will continue untill the user guesses correctly. When the user successfully guesses the 
 number, he'll win the game. The screen will also display the number of attempts made by the user in order to guess the number.
 
-## Project Proposal:
+# Project Proposal:
 
 This project focuses on providing an interactive and engaging gaming experience, making it suitable for beginners in programming.
 ### Objectives:
